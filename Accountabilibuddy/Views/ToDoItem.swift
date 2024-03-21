@@ -30,6 +30,7 @@ struct ToDoItem: View{
                 .padding()
              */
             HStack {
+                /*
                 Button{
                     self.ToDo.isDone.toggle()
                 }label: {
@@ -37,6 +38,7 @@ struct ToDoItem: View{
                         .labelStyle(.iconOnly)
                         .foregroundStyle(ToDo.isDone ? ToDo.color : .black)
                 }
+                 */
                 Text(ToDo.taskName)
                 Text("Reminders: \(ToDo.remindSchedule)")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/) //don't know if I like it bold
