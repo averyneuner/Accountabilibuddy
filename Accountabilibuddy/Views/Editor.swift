@@ -57,7 +57,7 @@ struct Editor: View {
         }
         .navigationTitle("Create a To Do!")
                
-               //BASICALLY: this is the button to take you back. not sure if it does that.
+               //BASICALLY: this is the button to take you back. not sure if it does that. g ghg 
         NavigationLink {
             ToDoList()
         } label: {
