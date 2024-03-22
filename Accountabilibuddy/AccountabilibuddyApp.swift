@@ -15,6 +15,7 @@ struct AccountabilibuddyApp: App {
         WindowGroup {
             ContentView()
                 .environment(userData)
+
         }
     }
 }
