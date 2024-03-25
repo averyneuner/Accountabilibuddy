@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-//rename this, utilize the aspects of TO DO ghghg 
+//rename this, utilize the aspects of TO DO  
 struct ToDoItem: View{
     @Environment(UserData.self) var userData
     var ToDo: ToDo

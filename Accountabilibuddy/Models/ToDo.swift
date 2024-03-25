@@ -14,7 +14,7 @@ struct ToDo: Identifiable, Codable{
     var isDone: Bool
     var taskName: String
     var remindSchedule: Date
-    var urgency: Int //1 - 3 less to most ghghgh 
+    var urgency: Int //1 - 3 less to most  
     var repeated: Bool
     var reward: String
     

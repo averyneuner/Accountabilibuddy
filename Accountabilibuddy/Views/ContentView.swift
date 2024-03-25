@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-//this will be a welcome page!! eventually g ghgh
+//this will be a welcome page!! eventually 
 
 struct ContentView: View {
     var body: some View {

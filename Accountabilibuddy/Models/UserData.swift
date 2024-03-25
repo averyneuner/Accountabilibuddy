@@ -12,7 +12,7 @@ import Foundation
 
 @Observable
 class UserData{
-    var toDos: [ToDo] = load("todo.json") //TODO: eventually we replace this with an empty json that will be populated by a user. these to do items will be saved to ourffgghghbg
+    var toDos: [ToDo] = load("todo.json") //TODO: eventually we replace this with an empty json that will be populated by a user. these to do items will be saved to user
 }
 
 var toDos: [ToDo] = load("todo.json")

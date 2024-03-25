@@ -2,7 +2,7 @@
 //  ToDoList.swift
 //  Accountabilibuddy
 //
-//  Created by Avery Neuner on 3/13/24. g ghghj 
+//  Created by Avery Neuner on 3/13/24.  
 //
 
 import Foundation
