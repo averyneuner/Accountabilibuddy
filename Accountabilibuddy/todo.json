@@ -1,49 +1,49 @@
 [
     {
-        "id": 0
+        "id": 0,
         "isDone": false,
         "taskName": "Laundry",
         "remindSchedule": "Sundays",
         "urgency": 1,
-        "repeated": true
+        "repeated": true,
         "reward": "Seeds"
     },
     {
-        "id": 1
+        "id": 1,
         "isDone": false,
         "taskName": "Email",
         "remindSchedule": "3/19/14",
         "urgency": 2,
-        "repeated": false
+        "repeated": false,
         "reward": "Yogurt"
-        
     },
     {
-        "id": 2
+        "id": 2,
         "isDone": false,
         "taskName": "Refill Meds",
         "remindSchedule": "By 3/25/24",
         "urgency": 3,
-        "repeated": false
+        "repeated": false,
         "reward": "Seeds"
     },
     {
-        "id": 3
+        "id": 3,
         "isDone": false,
         "taskName": "Blood Draw",
         "remindSchedule": "By 3/25/24",
         "urgency": 3,
-        "repeated": false
+        "repeated": false,
         "reward": "Fruit"
     },
     {
-        "id": 4
+        "id": 4,
         "isDone": false,
         "taskName": "Buy Grad Dress",
         "remindSchedule": "By 4/1/24",
         "urgency": 2,
-        "repeated": false
+        "repeated": false,
         "reward": "Yogurt"
     }
 ]
+
 

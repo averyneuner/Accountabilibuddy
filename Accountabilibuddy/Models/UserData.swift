@@ -2,17 +2,14 @@
 //  UserData.swift
 //  Accountabilibuddy
 //
-//  Created by Avery Neuner on 3/11/24.
+//  Created by Avery Neuner on 3/26/24.
 //
 
 import Foundation
 
-
-//This is a model of what user data might look like!! 
-
 @Observable
-class UserData{
-    var toDos: [ToDo] = load("todo.json") //TODO: eventually we replace this with an empty json that will be populated by a user. these to do items will be saved to user
+class UserData {
+    var toDos: [ToDo] = load("todo.json")
 }
 
 var toDos: [ToDo] = load("todo.json")
@@ -39,5 +36,3 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
- 
-

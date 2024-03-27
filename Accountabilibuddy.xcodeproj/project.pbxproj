@@ -15,11 +15,14 @@
 		C9286BDC2B9A7C210065960E /* AccountabilibuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9286BDB2B9A7C210065960E /* AccountabilibuddyUITests.swift */; };
 		C9286BDE2B9A7C210065960E /* AccountabilibuddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9286BDD2B9A7C210065960E /* AccountabilibuddyUITestsLaunchTests.swift */; };
 		C9286BEB2B9A7D440065960E /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9286BEA2B9A7D440065960E /* ToDo.swift */; };
-		C97238CC2B9F9BF600759BAB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97238CB2B9F9BF600759BAB /* UserData.swift */; };
 		C97238CE2B9FA4E300759BAB /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97238CD2B9FA4E300759BAB /* ToDoItem.swift */; };
 		C97238D22BA2231E00759BAB /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97238D12BA2231D00759BAB /* ToDoList.swift */; };
+		C9A410322BB36E1F009F81F3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A410312BB36E1F009F81F3 /* UserData.swift */; };
+		C9A410342BB36F61009F81F3 /* todo.json in Resources */ = {isa = PBXBuildFile; fileRef = C9A410332BB36F61009F81F3 /* todo.json */; };
 		C9CF77302BA77BF700B5A4CE /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF772F2BA77BF700B5A4CE /* Editor.swift */; };
-		C9CF77322BAA38CF00B5A4CE /* todo.json in Resources */ = {isa = PBXBuildFile; fileRef = C9CF77312BAA38CF00B5A4CE /* todo.json */; };
+		C9EDE15A2BB3AC7C0079EBAA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EDE1592BB3AC7C0079EBAA /* Home.swift */; };
+		C9EDE15C2BB3AF6A0079EBAA /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EDE15B2BB3AF6A0079EBAA /* SideMenuView.swift */; };
+		C9EDE1602BB47DC60079EBAA /* SideMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EDE15F2BB47DC60079EBAA /* SideMenuHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +54,14 @@
 		C9286BDB2B9A7C210065960E /* AccountabilibuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountabilibuddyUITests.swift; sourceTree = "<group>"; };
 		C9286BDD2B9A7C210065960E /* AccountabilibuddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountabilibuddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C9286BEA2B9A7D440065960E /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
-		C97238CB2B9F9BF600759BAB /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		C97238CD2B9FA4E300759BAB /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		C97238D12BA2231D00759BAB /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
+		C9A410312BB36E1F009F81F3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		C9A410332BB36F61009F81F3 /* todo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = todo.json; sourceTree = "<group>"; };
 		C9CF772F2BA77BF700B5A4CE /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
-		C9CF77312BAA38CF00B5A4CE /* todo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = todo.json; sourceTree = "<group>"; };
+		C9EDE1592BB3AC7C0079EBAA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		C9EDE15B2BB3AF6A0079EBAA /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		C9EDE15F2BB47DC60079EBAA /* SideMenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				C9286BC02B9A7C1C0065960E /* AccountabilibuddyApp.swift */,
-				C9CF77312BAA38CF00B5A4CE /* todo.json */,
+				C9A410332BB36F61009F81F3 /* todo.json */,
 				C97238D02B9FA51B00759BAB /* Models */,
 				C97238CF2B9FA4EE00759BAB /* Views */,
 				C9286BC42B9A7C200065960E /* Assets.xcassets */,
@@ -145,9 +151,9 @@
 			isa = PBXGroup;
 			children = (
 				C9286BC22B9A7C1C0065960E /* ContentView.swift */,
-				C97238CD2B9FA4E300759BAB /* ToDoItem.swift */,
-				C97238D12BA2231D00759BAB /* ToDoList.swift */,
-				C9CF772F2BA77BF700B5A4CE /* Editor.swift */,
+				C9EDE1592BB3AC7C0079EBAA /* Home.swift */,
+				C9EDE15D2BB47C6B0079EBAA /* SideMenu */,
+				C9EDE15E2BB47C890079EBAA /* ToDo */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,10 +161,29 @@
 		C97238D02B9FA51B00759BAB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C97238CB2B9F9BF600759BAB /* UserData.swift */,
+				C9A410312BB36E1F009F81F3 /* UserData.swift */,
 				C9286BEA2B9A7D440065960E /* ToDo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C9EDE15D2BB47C6B0079EBAA /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				C9EDE15B2BB3AF6A0079EBAA /* SideMenuView.swift */,
+				C9EDE15F2BB47DC60079EBAA /* SideMenuHeader.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		C9EDE15E2BB47C890079EBAA /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				C9CF772F2BA77BF700B5A4CE /* Editor.swift */,
+				C97238D12BA2231D00759BAB /* ToDoList.swift */,
+				C97238CD2B9FA4E300759BAB /* ToDoItem.swift */,
+			);
+			path = ToDo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +292,7 @@
 			files = (
 				C9286BC82B9A7C200065960E /* Preview Assets.xcassets in Resources */,
 				C9286BC52B9A7C200065960E /* Assets.xcassets in Resources */,
-				C9CF77322BAA38CF00B5A4CE /* todo.json in Resources */,
+				C9A410342BB36F61009F81F3 /* todo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,10 +319,13 @@
 			files = (
 				C9CF77302BA77BF700B5A4CE /* Editor.swift in Sources */,
 				C9286BEB2B9A7D440065960E /* ToDo.swift in Sources */,
+				C9EDE1602BB47DC60079EBAA /* SideMenuHeader.swift in Sources */,
+				C9A410322BB36E1F009F81F3 /* UserData.swift in Sources */,
 				C97238D22BA2231E00759BAB /* ToDoList.swift in Sources */,
 				C9286BC32B9A7C1C0065960E /* ContentView.swift in Sources */,
 				C97238CE2B9FA4E300759BAB /* ToDoItem.swift in Sources */,
-				C97238CC2B9F9BF600759BAB /* UserData.swift in Sources */,
+				C9EDE15C2BB3AF6A0079EBAA /* SideMenuView.swift in Sources */,
+				C9EDE15A2BB3AC7C0079EBAA /* Home.swift in Sources */,
 				C9286BC12B9A7C1C0065960E /* AccountabilibuddyApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -13,8 +13,8 @@ struct ToDo: Identifiable, Codable{
     var id: Int
     var isDone: Bool
     var taskName: String
-    var remindSchedule: Date
-    var urgency: Int //1 - 3 less to most  
+    var remindSchedule: String
+    var urgency: Int //1 - 3 less to most
     var repeated: Bool
     var reward: String
     
@@ -31,7 +31,7 @@ struct ToDo: Identifiable, Codable{
         }
     }
     
-    init(id: Int, isDone: Bool, taskName: String, remindSchedule: Date, urgency: Int, repeated: Bool, reward: String) {
+    init(id: Int, isDone: Bool, taskName: String, remindSchedule: String, urgency: Int, repeated: Bool, reward: String) {
         self.id = id
         self.isDone = isDone
         self.taskName = taskName

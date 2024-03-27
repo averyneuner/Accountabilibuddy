@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Editor: View {
     @Environment (UserData.self) var userData
-    var toDo = ToDo(id: 0, isDone: false, taskName: "", remindSchedule: Date(), urgency: 1, repeated: false, reward: "")
+    var toDo = ToDo(id: 0, isDone: false, taskName: "", remindSchedule: "", urgency: 1, repeated: false, reward: "")
     //can I create an empty to do that will be filled out here??
     
     //TODO: for now this is just a static option since buddies don't exist yet
@@ -20,6 +20,7 @@ struct Editor: View {
     let  urgencyOptions = [1, 2, 3]
     //let date = Calendar.date(from: toDo.remindSchedule)
     //TODO: figure out calendar object?
+    //TODO: MS. GREYSON QUESTION: WHY ISN'T THIS EDITOR DISPLAYING ANYTHING 
     
     var body: some View{
         @Bindable var userData = userData
@@ -36,11 +37,16 @@ struct Editor: View {
                 }
                 .pickerStyle(.segmented)
                 
+                Text("Enter To Do")
+                TextField("To Do", text: $userData.toDos[0].remindSchedule)
+                
+                /*
                 DatePicker(
                     "Remind Date",
                     selection: $userData.toDos[0].remindSchedule,
                     displayedComponents: [.date, .hourAndMinute]
                 )
+                */
                 
                 Toggle(isOn: $userData.toDos[0].repeated){
                     Text("Is this task repeated?")
@@ -70,4 +76,5 @@ struct Editor: View {
 
 #Preview {
     ContentView()
+        .environment(UserData())
 }

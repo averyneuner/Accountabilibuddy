@@ -11,7 +11,7 @@ import SwiftUI
 //rename this, utilize the aspects of TO DO  
 struct ToDoItem: View{
     @Environment(UserData.self) var userData
-    var ToDo: ToDo
+    @State var ToDo: ToDo
     
     var toDoIndex: Int {
         userData.toDos.firstIndex(where: { $0.id == ToDo.id })!
@@ -30,15 +30,13 @@ struct ToDoItem: View{
                 .padding()
              */
             HStack {
-                /*
                 Button{
-                    self.ToDo.isDone.toggle()
+                    ToDo.isDone.toggle()
                 }label: {
                     Label("Toggle Favorite", systemImage:ToDo.isDone ? "checkmark.square.fill" : "checkmark.square")
                         .labelStyle(.iconOnly)
                         .foregroundStyle(ToDo.isDone ? ToDo.color : .black)
                 }
-                 */
                 Text(ToDo.taskName)
                 Text("Reminders: \(ToDo.remindSchedule)")
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/) //don't know if I like it bold
@@ -52,5 +50,6 @@ struct ToDoItem: View{
 
 #Preview{
     ToDoItem(ToDo: UserData().toDos[0])
+        .environment(UserData())
     //is this correct??
 }

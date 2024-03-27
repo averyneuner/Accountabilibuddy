@@ -30,4 +30,5 @@ struct ToDoList: View{
 
 #Preview {
    ToDoList()
+        .environment(UserData())
 }
