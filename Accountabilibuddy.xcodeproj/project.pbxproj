@@ -19,10 +19,13 @@
 		C97238D22BA2231E00759BAB /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97238D12BA2231D00759BAB /* ToDoList.swift */; };
 		C9A410322BB36E1F009F81F3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A410312BB36E1F009F81F3 /* UserData.swift */; };
 		C9A410342BB36F61009F81F3 /* todo.json in Resources */ = {isa = PBXBuildFile; fileRef = C9A410332BB36F61009F81F3 /* todo.json */; };
+		C9CBB09C2BBCA170009D6CD7 /* Creator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CBB09B2BBCA16F009D6CD7 /* Creator.swift */; };
 		C9CF77302BA77BF700B5A4CE /* Editor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CF772F2BA77BF700B5A4CE /* Editor.swift */; };
 		C9EDE15A2BB3AC7C0079EBAA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EDE1592BB3AC7C0079EBAA /* Home.swift */; };
 		C9EDE15C2BB3AF6A0079EBAA /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EDE15B2BB3AF6A0079EBAA /* SideMenuView.swift */; };
 		C9EDE1602BB47DC60079EBAA /* SideMenuHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EDE15F2BB47DC60079EBAA /* SideMenuHeader.swift */; };
+		C9EDE1622BB618E10079EBAA /* SideMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EDE1612BB618E00079EBAA /* SideMenuRow.swift */; };
+		C9EDE1662BB61E4A0079EBAA /* ToDoCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EDE1652BB61E4A0079EBAA /* ToDoCategories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +61,13 @@
 		C97238D12BA2231D00759BAB /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		C9A410312BB36E1F009F81F3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		C9A410332BB36F61009F81F3 /* todo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = todo.json; sourceTree = "<group>"; };
+		C9CBB09B2BBCA16F009D6CD7 /* Creator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creator.swift; sourceTree = "<group>"; };
 		C9CF772F2BA77BF700B5A4CE /* Editor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Editor.swift; sourceTree = "<group>"; };
 		C9EDE1592BB3AC7C0079EBAA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		C9EDE15B2BB3AF6A0079EBAA /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		C9EDE15F2BB47DC60079EBAA /* SideMenuHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeader.swift; sourceTree = "<group>"; };
+		C9EDE1612BB618E00079EBAA /* SideMenuRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRow.swift; sourceTree = "<group>"; };
+		C9EDE1652BB61E4A0079EBAA /* ToDoCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCategories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C9A410312BB36E1F009F81F3 /* UserData.swift */,
+				C9EDE1652BB61E4A0079EBAA /* ToDoCategories.swift */,
 				C9286BEA2B9A7D440065960E /* ToDo.swift */,
 			);
 			path = Models;
@@ -170,6 +177,7 @@
 		C9EDE15D2BB47C6B0079EBAA /* SideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				C9EDE1612BB618E00079EBAA /* SideMenuRow.swift */,
 				C9EDE15B2BB3AF6A0079EBAA /* SideMenuView.swift */,
 				C9EDE15F2BB47DC60079EBAA /* SideMenuHeader.swift */,
 			);
@@ -180,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C9CF772F2BA77BF700B5A4CE /* Editor.swift */,
+				C9CBB09B2BBCA16F009D6CD7 /* Creator.swift */,
 				C97238D12BA2231D00759BAB /* ToDoList.swift */,
 				C97238CD2B9FA4E300759BAB /* ToDoItem.swift */,
 			);
@@ -320,13 +329,16 @@
 				C9CF77302BA77BF700B5A4CE /* Editor.swift in Sources */,
 				C9286BEB2B9A7D440065960E /* ToDo.swift in Sources */,
 				C9EDE1602BB47DC60079EBAA /* SideMenuHeader.swift in Sources */,
+				C9EDE1622BB618E10079EBAA /* SideMenuRow.swift in Sources */,
 				C9A410322BB36E1F009F81F3 /* UserData.swift in Sources */,
 				C97238D22BA2231E00759BAB /* ToDoList.swift in Sources */,
+				C9CBB09C2BBCA170009D6CD7 /* Creator.swift in Sources */,
 				C9286BC32B9A7C1C0065960E /* ContentView.swift in Sources */,
 				C97238CE2B9FA4E300759BAB /* ToDoItem.swift in Sources */,
 				C9EDE15C2BB3AF6A0079EBAA /* SideMenuView.swift in Sources */,
 				C9EDE15A2BB3AC7C0079EBAA /* Home.swift in Sources */,
 				C9286BC12B9A7C1C0065960E /* AccountabilibuddyApp.swift in Sources */,
+				C9EDE1662BB61E4A0079EBAA /* ToDoCategories.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

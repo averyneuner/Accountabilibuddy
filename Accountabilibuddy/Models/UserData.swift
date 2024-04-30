@@ -13,6 +13,7 @@ class UserData {
 }
 
 var toDos: [ToDo] = load("todo.json")
+
 //houses a load method that grabs data from the JSON
 //It is codable. It takes in a file name and returns T??
 func load<T: Decodable>(_ filename: String) -> T {

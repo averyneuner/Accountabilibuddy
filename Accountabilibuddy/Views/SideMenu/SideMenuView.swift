@@ -25,6 +25,17 @@ struct SideMenuView: View {
                     VStack(alignment: .leading, spacing: 32){
                         SideMenuHeader()
                         
+                        
+                        VStack{
+                        SideMenuRow(category: ToDoCategories.general)
+                        SideMenuRow(category: ToDoCategories.work)
+                            SideMenuRow(category: ToDoCategories.social)
+                        SideMenuRow(category:ToDoCategories.creative)
+                        
+                        
+                
+                        }
+                        
                         Spacer()
                     }
                     .padding()

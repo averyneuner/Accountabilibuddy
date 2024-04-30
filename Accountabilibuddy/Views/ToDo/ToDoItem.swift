@@ -13,10 +13,6 @@ struct ToDoItem: View{
     @Environment(UserData.self) var userData
     @State var ToDo: ToDo
     
-    var toDoIndex: Int {
-        userData.toDos.firstIndex(where: { $0.id == ToDo.id })!
-    }
-    
     var body: some View{
         @Bindable var userData = userData
         

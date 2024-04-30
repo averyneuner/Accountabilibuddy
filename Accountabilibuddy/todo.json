@@ -1,48 +1,54 @@
 [
     {
-        "id": 0,
+        "id": "550e8400-e29b-41d4-a716-446655440000",
         "isDone": false,
         "taskName": "Laundry",
         "remindSchedule": "Sundays",
         "urgency": 1,
         "repeated": true,
-        "reward": "Seeds"
+        "reward": "Seeds",
+        "categoryIndex": 1
+
     },
     {
-        "id": 1,
+        "id": "550e8400-e29b-41d4-a716-446655440001",
         "isDone": false,
         "taskName": "Email",
         "remindSchedule": "3/19/14",
         "urgency": 2,
         "repeated": false,
-        "reward": "Yogurt"
+        "reward": "Yogurt",
+        "categoryIndex": 2
     },
     {
-        "id": 2,
+        "id": "550e8400-e29b-41d4-a716-446655440002",
         "isDone": false,
         "taskName": "Refill Meds",
         "remindSchedule": "By 3/25/24",
         "urgency": 3,
         "repeated": false,
-        "reward": "Seeds"
+        "reward": "Seeds",
+        "categoryIndex": 1
     },
     {
-        "id": 3,
+        "id": "550e8400-e29b-41d4-a716-446655440003",
         "isDone": false,
         "taskName": "Blood Draw",
         "remindSchedule": "By 3/25/24",
         "urgency": 3,
         "repeated": false,
-        "reward": "Fruit"
+        "reward": "Fruit",
+        "categoryIndex": 1
     },
     {
-        "id": 4,
+        "id": "550e8400-e29b-41d4-a716-446655440004",
         "isDone": false,
         "taskName": "Buy Grad Dress",
         "remindSchedule": "By 4/1/24",
         "urgency": 2,
         "repeated": false,
-        "reward": "Yogurt"
+        "reward": "Yogurt",
+        "categoryIndex": 2
     }
 ]
 

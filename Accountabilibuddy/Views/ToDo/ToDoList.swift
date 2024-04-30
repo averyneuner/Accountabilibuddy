@@ -18,7 +18,11 @@ struct ToDoList: View{
     var body: some View{
         List {
             ForEach(ToDoList) { toDo in
-                ToDoItem(ToDo: toDo)
+                NavigationLink {
+                    Editor(ToDo: toDo)
+                } label: {
+                    ToDoItem(ToDo: toDo)
+                }
                 
             }
         }

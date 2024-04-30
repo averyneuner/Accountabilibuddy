@@ -13,7 +13,7 @@ struct AccountabilibuddyApp: App {
     //NOTE: ms. greyson made me add this
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Home()
                 .environment(userData)
 
         }

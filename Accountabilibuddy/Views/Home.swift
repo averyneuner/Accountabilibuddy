@@ -14,16 +14,24 @@ struct Home: View {
     
     var body: some View {
         //example of a side navigation bar
+        //figure out how to use this to filter the to dos you have!! 
         NavigationStack {
             ZStack {
                 VStack{
-                    Text("Welcome to Accountabilibuddy")
+                    //button
+                    NavigationLink(destination: Creator()) {
+                        Image(systemName: "plus.circle.fill")
+                            .padding(.init(top: 645.0, leading: 320.0, bottom: 10.0, trailing: 10.0))
+                            .background(Color(red: 0.9, green: 0.2, blue: 0.6))
+
+                    }
+
                 }
                 
                 SideMenuView(isShowing: $showMenu)
             }
             .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
-            .navigationTitle("Home")
+            .navigationTitle("Accountabilibuddy")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{
                 ToolbarItem(placement: .topBarLeading){
@@ -34,10 +42,14 @@ struct Home: View {
                     })
                 }
             }
+            
+                
+            }
+                
+            }
         }
-        
-    }
-}
+
+    
 
 #Preview {
     Home()

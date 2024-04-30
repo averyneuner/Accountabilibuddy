@@ -10,13 +10,42 @@ import SwiftUI
 
 struct ToDo: Identifiable, Codable{
     //how to make this properly take arguments??
-    var id: Int
+    let id: UUID
     var isDone: Bool
     var taskName: String
     var remindSchedule: String
     var urgency: Int //1 - 3 less to most
     var repeated: Bool
     var reward: String
+    var categoryIndex: Int //1-4 for general, work, social, creative
+    
+    var category: String{
+        if self.categoryIndex == 1{
+            return ToDoCategories.general.title
+        }else if self.categoryIndex == 2{
+           return ToDoCategories.work.title
+        }else if self.categoryIndex == 3{
+            return ToDoCategories.social.title
+        }else if self.categoryIndex == 4{
+          return ToDoCategories.creative.title
+        }else{
+            return "UNDEFINED"
+        }
+    }
+    
+    var imageName: String{
+        if self.categoryIndex == 1{
+            return ToDoCategories.general.imageName
+        }else if self.categoryIndex == 2{
+           return ToDoCategories.work.imageName
+        }else if self.categoryIndex == 3{
+            return ToDoCategories.social.imageName
+        }else if self.categoryIndex == 4{
+          return ToDoCategories.creative.imageName
+        }else{
+            return "UNDEFINED"
+        }
+    }
     
     var color: Color{
         if self.urgency == 1{
@@ -31,14 +60,16 @@ struct ToDo: Identifiable, Codable{
         }
     }
     
-    init(id: Int, isDone: Bool, taskName: String, remindSchedule: String, urgency: Int, repeated: Bool, reward: String) {
-        self.id = id
+    init(isDone: Bool, taskName: String, remindSchedule: String, urgency: Int, repeated: Bool, reward: String, categoryIndex: Int) {
+        self.id = UUID()
         self.isDone = isDone
         self.taskName = taskName
         self.remindSchedule = remindSchedule
         self.urgency = urgency
         self.repeated = repeated
         self.reward = reward
+        self.categoryIndex = categoryIndex
     }
+    
 }
 
