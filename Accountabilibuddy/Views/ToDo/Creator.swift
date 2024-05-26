@@ -16,11 +16,10 @@ struct Creator: View {
     @State var remindSchedule = ""
     @State var urgency = 0
     @State var repeated = false
-    @State var reward = ""
     @State var categoryIndex = 0
     
     private func add(){
-        userData.toDos.append(ToDo(isDone: isDone, taskName: taskName, remindSchedule: remindSchedule, urgency: urgency, repeated: repeated, reward: reward, categoryIndex: categoryIndex))
+        userData.toDos.append(ToDo(isDone: isDone, taskName: taskName, remindSchedule: remindSchedule, urgency: urgency, repeated: repeated, categoryIndex: categoryIndex))
     }
     
     //TODO: for now this is just a static option since buddies don't exist yet
@@ -76,27 +75,32 @@ struct Creator: View {
                 }
                 .bold()
                 
-               Text("Reward")
-                    .bold()
-                Picker("Reward", selection: $reward){
-                    ForEach(rewards, id: \.self){ reward in
-                        Text(reward)
-                    }
-                }
-                .pickerStyle(.segmented)
             
             }
-            Button("Create", action: add)
+            
+            
+            //how to make this button do things and go places
+            
+            //HOW GO PLACES 
+            
+            
+                Button("Create", action: add)
                 .padding()
                 .foregroundColor(.white)
                 .background(Color(red: 0, green: 0.7, blue: 0.2))
                 .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
+            NavigationLink("Escape"){
+                Home(category: ToDoCategories.all)
+            }
+        
+            
+            
+
         }
-        .navigationTitle("CreateToDo")
+        .navigationTitle("Create To Do!")
+        //why is it going here ALL the time
                
-               //BASICALLY: this is the button to take you back. not sure if it does that.
-      
-        //TODO: unsure about buttons
+              
     }
     
 }

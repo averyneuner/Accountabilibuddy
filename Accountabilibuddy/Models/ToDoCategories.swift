@@ -8,6 +8,7 @@
 import Foundation
 
 enum ToDoCategories: Int, CaseIterable{
+    case all
     case general
     case work
     case social
@@ -15,6 +16,7 @@ enum ToDoCategories: Int, CaseIterable{
     
     var title: String {
         switch self{
+        case .all: return "All"
         case .general: return "General"
         case .work: return "Work"
         case .social: return "Social"
@@ -24,6 +26,7 @@ enum ToDoCategories: Int, CaseIterable{
     
     var imageName: String {
         switch self{
+        case .all: return "moonphase.new.moon"
         case .general: return "checkmark.seal"
         case .work: return "list.number"
         case .social: return "party.popper"
@@ -33,6 +36,7 @@ enum ToDoCategories: Int, CaseIterable{
     
     var index: Int{
         switch self{
+        case .all: return 0
         case .general: return 1
         case .work: return 2
         case .social: return 3

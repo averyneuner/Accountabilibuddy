@@ -9,30 +9,38 @@ import Foundation
 import SwiftUI
 
 struct ToDoList: View{
-    @Environment(UserData.self) var userData
+    @Environment (UserData.self) var userData
+    var showingCategory: Int
     
-    var ToDoList: [ToDo] {
-        userData.toDos
+    //insert array filtering for if done here! 
+    var filteredToDos: [ToDo]{
+        userData.toDos.filter { ToDo in
+            (ToDo.isDone == false)
+        }
     }
+    
     
     var body: some View{
-        List {
-            ForEach(ToDoList) { toDo in
-                NavigationLink {
-                    Editor(ToDo: toDo)
-                } label: {
-                    ToDoItem(ToDo: toDo)
+        
+        NavigationView{
+            List {
+                ForEach(filteredToDos) { toDo in
+                    if(toDo.categoryIndex == showingCategory){
+                        ToDoItem(ToDo: toDo)
+                    }else if showingCategory == 0{
+                        ToDoItem(ToDo: toDo)
+                    }
+                    
                 }
-                
             }
+            .navigationTitle("To Do List!")
         }
-        .navigationTitle("To Do List!")
-    }
-    
+        }
+       
 }
      
 
 #Preview {
-   ToDoList()
+   ToDoList(showingCategory: 0)
         .environment(UserData())
 }

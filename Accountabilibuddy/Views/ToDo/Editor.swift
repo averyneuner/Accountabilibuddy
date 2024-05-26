@@ -15,8 +15,16 @@ struct Editor: View {
         userData.toDos.firstIndex(where: {$0.id == ToDo.id})!
     }
     
+    
     @State private var rewards = ["Yogurt", "Seeds", "Fruit"]
     let urgencyOptions = [1, 2, 3]
+    
+    @State private var wasEditted = false
+    
+    private func edit(){
+        toDos[toDoIndex] = ToDo
+        wasEditted = true
+    }
     
     var body: some View{
         @Bindable var userData = userData
@@ -38,54 +46,59 @@ struct Editor: View {
                 
                 Text("Category")
                     .bold()
-                 Picker("Category", selection: $userData.toDos[toDoIndex].categoryIndex){
-                     Text("General").tag(ToDoCategories.general.index)
-                     Text("Work").tag(ToDoCategories.work.index)
-                     Text("Social").tag(ToDoCategories.social.index)
-                     Text("Creative").tag(ToDoCategories.creative.index)
-                 }
-                 .pickerStyle(.segmented)
+                Picker("Category", selection: $userData.toDos[toDoIndex].categoryIndex){
+                    Text("General").tag(ToDoCategories.general.index)
+                    Text("Work").tag(ToDoCategories.work.index)
+                    Text("Social").tag(ToDoCategories.social.index)
+                    Text("Creative").tag(ToDoCategories.creative.index)
+                }
+                .pickerStyle(.segmented)
                 
                 Text("Enter Schedule")
                     .bold()
                 TextField("Remind Schedule", text: $userData.toDos[toDoIndex].remindSchedule)
                 
                 /*
-                DatePicker(
-                    "Remind Date",
-                    selection: $userData.toDos[0].remindSchedule,
-                    displayedComponents: [.date, .hourAndMinute]
-                )
-                */
+                 DatePicker(
+                 "Remind Date",
+                 selection: $userData.toDos[0].remindSchedule,
+                 displayedComponents: [.date, .hourAndMinute]
+                 )
+                 */
                 
                 Toggle(isOn: $userData.toDos[toDoIndex].repeated){
                     Text("Is this task repeated?")
                 }
                 .bold()
                 
-               Text("Reward")
-                    .bold()
-                Picker("Reward", selection: $userData.toDos[toDoIndex].reward){
-                    ForEach(rewards, id: \.self){ reward in
-                        Text(reward)
-                    }
-                }
-                .pickerStyle(.segmented)
-                               
-        
+                
+                
             }
-
-            Button("Finish", action:{toDos[toDoIndex] = ToDo})
-                .padding()
-                .foregroundColor(.white)
-                .background(Color(red: 0, green: 0.7, blue: 0.2))
-                .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
+            
+           
+               
+                Button("Finish", action: edit)
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color(red: 0, green: 0.7, blue: 0.2))
+                    .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
+                NavigationLink("Escape"){
+                    Home(category: ToDoCategories.all)
+                }
+            
+          
         }
-        .navigationTitle("EditToDo")
-                     
+        .navigationTitle("Edit To Do!")
+
+        
+        
+        
     }
+        
+    }
+
     
-}
+
 
 #Preview {
     Editor(ToDo: UserData().toDos[0])

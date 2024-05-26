@@ -12,21 +12,19 @@ struct SideMenuHeader: View {
     
     var body: some View {
         HStack{
-            Image(systemName: "person.circle.fill")
+            Image(systemName: "checkmark.seal.fill")
                 .imageScale(.large)
                 .foregroundStyle(.white)
                 .frame(width: 48, height: 48)
-                .background(.blue)
+                .background(.green)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .padding(.vertical)
             
             VStack(alignment: .leading, spacing: 6) {
-                Text("Avery Neuner")
+                Text("Sort Tasks")
                     .font(.subheadline)
                 
-                Text("test@gmail.com")
-                    .font(.footnote)
-                    .tint(.gray)
+            
             }
                 
         }
@@ -36,4 +34,5 @@ struct SideMenuHeader: View {
 
 #Preview {
     SideMenuHeader()
+        .environment(UserData())
 }

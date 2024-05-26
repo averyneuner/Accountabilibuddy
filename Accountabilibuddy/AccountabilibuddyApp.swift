@@ -13,9 +13,8 @@ struct AccountabilibuddyApp: App {
     //NOTE: ms. greyson made me add this
     var body: some Scene {
         WindowGroup {
-            Home()
+            Home(category: ToDoCategories.all)
                 .environment(userData)
-
         }
     }
 }

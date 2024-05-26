@@ -30,5 +30,6 @@ struct SideMenuRow: View{
 
  #Preview {
      SideMenuRow(category: ToDoCategories.social)
+         .environment(UserData())
  }
  

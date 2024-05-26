@@ -27,12 +27,31 @@ struct SideMenuView: View {
                         
                         
                         VStack{
-                        SideMenuRow(category: ToDoCategories.general)
-                        SideMenuRow(category: ToDoCategories.work)
-                            SideMenuRow(category: ToDoCategories.social)
-                        SideMenuRow(category:ToDoCategories.creative)
-                        
-                        
+                            NavigationLink{
+                                Home(category: ToDoCategories.all)
+                            } label: {
+                                SideMenuRow(category: ToDoCategories.all)
+                            }
+                            NavigationLink{
+                                Home(category: ToDoCategories.general)
+                            } label: {
+                                SideMenuRow(category: ToDoCategories.general)
+                            }
+                            NavigationLink{
+                                Home(category: ToDoCategories.work)
+                            } label: {
+                                SideMenuRow(category: ToDoCategories.work)
+                            }
+                            NavigationLink{
+                                Home(category: ToDoCategories.social)
+                            } label: {
+                                SideMenuRow(category: ToDoCategories.social)
+                            }
+                            NavigationLink{
+                                Home(category: ToDoCategories.creative)
+                            } label: {
+                                SideMenuRow(category: ToDoCategories.creative)
+                            }
                 
                         }
                         
@@ -54,4 +73,6 @@ struct SideMenuView: View {
 
 #Preview {
     SideMenuView(isShowing: .constant(true))
+        .environment(UserData())
+
 }

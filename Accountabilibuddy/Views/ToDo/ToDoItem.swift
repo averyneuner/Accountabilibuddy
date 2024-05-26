@@ -16,29 +16,41 @@ struct ToDoItem: View{
     var body: some View{
         @Bindable var userData = userData
         
-        ZStack {
-            /*
-            RoundedRectangle(cornerRadius: 10.0)
-                .size(width: 365.0, height: 90.0)
-                //how to bind rectangles to the to dos.position()
-                .fill(ToDo.color)
-            
-                .padding()
-             */
-            HStack {
-                Button{
-                    ToDo.isDone.toggle()
-                }label: {
-                    Label("Toggle Favorite", systemImage:ToDo.isDone ? "checkmark.square.fill" : "checkmark.square")
-                        .labelStyle(.iconOnly)
-                        .foregroundStyle(ToDo.isDone ? ToDo.color : .black)
+        NavigationStack{
+            ZStack{
+              
+                HStack {
+                        
+                        VStack {
+                            Image(systemName: ToDo.isDone ? "checkmark.square.fill" : "checkmark.square")
+                                .onTapGesture {
+                                    ToDo.isDone = !ToDo.isDone
+                                }
+                           
+                            
+                        }
+                        Text(ToDo.taskName)
+                        Text("Reminders: \(ToDo.remindSchedule)")
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/) //don't know if I like it bold
+                      
+                     Spacer()
+                        VStack {
+                            NavigationLink {
+                                    Editor(ToDo: ToDo)
+                                } label: {
+                                    Label("Edit To Do", systemImage: "arrow.right")
+                                        .labelStyle(.iconOnly)
+                                        .foregroundStyle(.black)
+                            }
+                        }
+                       
+                         Spacer()
+                    
+                    
                 }
-                Text(ToDo.taskName)
-                Text("Reminders: \(ToDo.remindSchedule)")
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/) //don't know if I like it bold
-                 Spacer()
+                .padding(.leading)
+                .background(ToDo.color)
             }
-            .padding(.leading)
         }
     }
     }
