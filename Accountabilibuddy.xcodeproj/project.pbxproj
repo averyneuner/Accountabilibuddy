@@ -15,6 +15,7 @@
 		C9286BDC2B9A7C210065960E /* AccountabilibuddyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9286BDB2B9A7C210065960E /* AccountabilibuddyUITests.swift */; };
 		C9286BDE2B9A7C210065960E /* AccountabilibuddyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9286BDD2B9A7C210065960E /* AccountabilibuddyUITestsLaunchTests.swift */; };
 		C9286BEB2B9A7D440065960E /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9286BEA2B9A7D440065960E /* ToDo.swift */; };
+		C967F7C92C03008E0008AC0B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C967F7C82C03008E0008AC0B /* Launch Screen.storyboard */; };
 		C97238CE2B9FA4E300759BAB /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97238CD2B9FA4E300759BAB /* ToDoItem.swift */; };
 		C97238D22BA2231E00759BAB /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97238D12BA2231D00759BAB /* ToDoList.swift */; };
 		C9A410322BB36E1F009F81F3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A410312BB36E1F009F81F3 /* UserData.swift */; };
@@ -57,6 +58,7 @@
 		C9286BDB2B9A7C210065960E /* AccountabilibuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountabilibuddyUITests.swift; sourceTree = "<group>"; };
 		C9286BDD2B9A7C210065960E /* AccountabilibuddyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountabilibuddyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C9286BEA2B9A7D440065960E /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		C967F7C82C03008E0008AC0B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C97238CD2B9FA4E300759BAB /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		C97238D12BA2231D00759BAB /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		C9A410312BB36E1F009F81F3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		C9286BB42B9A7C1C0065960E = {
 			isa = PBXGroup;
 			children = (
+				C967F7C82C03008E0008AC0B /* Launch Screen.storyboard */,
 				C9286BBF2B9A7C1C0065960E /* Accountabilibuddy */,
 				C9286BD02B9A7C210065960E /* AccountabilibuddyTests */,
 				C9286BDA2B9A7C210065960E /* AccountabilibuddyUITests */,
@@ -301,6 +304,7 @@
 			files = (
 				C9286BC82B9A7C200065960E /* Preview Assets.xcassets in Resources */,
 				C9286BC52B9A7C200065960E /* Assets.xcassets in Resources */,
+				C967F7C92C03008E0008AC0B /* Launch Screen.storyboard in Resources */,
 				C9A410342BB36F61009F81F3 /* todo.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +503,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Accountabilibuddy/Preview Content\"";
@@ -507,6 +512,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -527,6 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Accountabilibuddy/Preview Content\"";
@@ -535,6 +542,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
