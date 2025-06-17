@@ -11,11 +11,14 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //basically just an example of a home bar
-        //TODO: MS. GREYSON QUESTION, WHY ISN'T THIS GIVING ME ANYTHING
-        
-            Text("Hello World")
-        
+        ZStack {
+            Color.pink.opacity(0.2) // Gentle pink background
+                .ignoresSafeArea()
+
+            VStack {
+                Text("Welcome to Accountabilibuddy!")
+                    .foregroundColor(.green.opacity(0.6)) // Gentle green text
+            }
         }
     }
 

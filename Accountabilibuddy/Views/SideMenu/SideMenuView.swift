@@ -59,7 +59,7 @@ struct SideMenuView: View {
                     }
                     .padding()
                     .frame(width: 270, alignment: .leading)
-                    .background(.white)
+                    .background(Color(red: 1.0, green: 0.9, blue: 0.95)) // Very light pink
                     
                     Spacer()
                 }

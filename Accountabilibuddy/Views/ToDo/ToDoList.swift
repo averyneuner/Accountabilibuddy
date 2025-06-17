@@ -34,6 +34,8 @@ struct ToDoList: View{
                 }
             }
             .navigationTitle("To Do List!")
+            // Apply gentle green color to the navigation title
+            .foregroundColor(.green) // Use a gentle green color
         }
         }
        

@@ -35,10 +35,12 @@ struct Creator: View {
         
         NavigationStack{
             Form{
+                // Labels and TextFields
                 Text("Enter To Do")
                     .bold()
+                    .foregroundColor(Color(red: 0.4, green: 0.6, blue: 0.4)) // Gentle Green
                 TextField("To Do", text: $taskName)
-                
+
                 Text("Urgency")
                     .bold()
                 Picker("Urgency", selection: $urgency){
@@ -47,7 +49,7 @@ struct Creator: View {
                     Text("High").tag(urgencyOptions[2])
                 }
                 .pickerStyle(.segmented)
-                
+
                 Text("Category")
                     .bold()
                  Picker("Category", selection: $categoryIndex){
@@ -57,10 +59,11 @@ struct Creator: View {
                      Text("Creative").tag(ToDoCategories.creative.index)
                  }
                  .pickerStyle(.segmented)
-                
+
                 Text("Enter Schedule")
                     .bold()
                 TextField("Remind Schedule", text: $remindSchedule)
+
                 
                 /*
                 DatePicker(

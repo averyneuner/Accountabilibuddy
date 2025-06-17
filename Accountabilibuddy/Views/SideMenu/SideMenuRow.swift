@@ -16,9 +16,11 @@ struct SideMenuRow: View{
         HStack {
             Image(systemName: category.imageName)
                 .imageScale(.small)
+                .foregroundColor(Color.green.opacity(0.7)) // Gentle green for icon
             
             Text(category.title)
                 .font(.subheadline)
+                .foregroundColor(Color.green.opacity(0.7)) // Gentle green for text
             
             Spacer()
         }

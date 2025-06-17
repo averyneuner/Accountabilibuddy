@@ -38,7 +38,7 @@ struct Home: View {
                         Spacer()
                         NavigationLink(destination: Creator()){
                                 Image(systemName: "plus.circle.fill")
-                                    .tint(Color(red: 0.9, green: 0.2, blue: 0.6))
+ .tint(.green)
                                     .padding()
                                     
                         }
@@ -47,7 +47,9 @@ struct Home: View {
                
                 SideMenuView(isShowing: $showMenu)
             }
-            .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
+ .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
+ .toolbarBackground(Color.pink.opacity(0.2), for: .navigationBar) // Added gentle pink background
+ .toolbarBackground(.visible, for: .navigationBar) // Make background visible
             .navigationTitle("Accountabilibuddy")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar{

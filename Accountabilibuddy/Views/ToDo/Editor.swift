@@ -8,6 +8,12 @@
 import Foundation
 import SwiftUI
 
+// Define gentle green and pink colors
+extension Color {
+    static let gentleGreen = Color(red: 0.6, green: 0.8, blue: 0.6) // Example gentle green
+    static let gentlePink = Color(red: 0.95, green: 0.7, blue: 0.75) // Example gentle pink
+}
+
 struct Editor: View {
     @Environment (UserData.self) var userData
     var ToDo: ToDo
@@ -31,12 +37,15 @@ struct Editor: View {
         
         NavigationStack{
             Form{
-                Text("Enter To Do")
-                    .bold()
+                Section(header: Text("Task Details").font(.headline).foregroundColor(.gentleGreen)) {
+                    Text("Enter To Do")
+                        .bold()
+                        .foregroundColor(.gentleGreen)
+                }
                 TextField("To Do", text: $userData.toDos[toDoIndex].taskName)
                 
                 Text("Urgency")
-                    .bold()
+                    .bold().foregroundColor(.gentleGreen)
                 Picker("Urgency", selection: $userData.toDos[toDoIndex].urgency){
                     Text("Low").tag(urgencyOptions[0])
                     Text("Medium").tag(urgencyOptions[1])
@@ -45,7 +54,7 @@ struct Editor: View {
                 .pickerStyle(.segmented)
                 
                 Text("Category")
-                    .bold()
+                    .bold().foregroundColor(.gentleGreen)
                 Picker("Category", selection: $userData.toDos[toDoIndex].categoryIndex){
                     Text("General").tag(ToDoCategories.general.index)
                     Text("Work").tag(ToDoCategories.work.index)
@@ -55,7 +64,7 @@ struct Editor: View {
                 .pickerStyle(.segmented)
                 
                 Text("Enter Schedule")
-                    .bold()
+                    .bold().foregroundColor(.gentleGreen)
                 TextField("Remind Schedule", text: $userData.toDos[toDoIndex].remindSchedule)
                 
                 /*
@@ -68,7 +77,7 @@ struct Editor: View {
                 
                 Toggle(isOn: $userData.toDos[toDoIndex].repeated){
                     Text("Is this task repeated?")
-                }
+                }.foregroundColor(.gentleGreen)
                 .bold()
                 
                 
@@ -79,16 +88,17 @@ struct Editor: View {
                
                 Button("Finish", action: edit)
                     .padding()
-                    .foregroundColor(.white)
-                    .background(Color(red: 0, green: 0.7, blue: 0.2))
+                    .foregroundColor(.gentlePink)
+                    .background(Color.gentleGreen)
                     .clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/))
                 NavigationLink("Escape"){
                     Home(category: ToDoCategories.all)
                 }
+                .foregroundColor(.gentlePink)
             
           
         }
-        .navigationTitle("Edit To Do!")
+        .navigationTitle("Edit To Do!").foregroundColor(.gentleGreen)
 
         
         

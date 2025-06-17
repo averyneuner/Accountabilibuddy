@@ -18,6 +18,7 @@ struct ToDoItem: View{
         
         NavigationStack{
             ZStack{
+ .background(Color(red: 0.98, green: 0.9, blue: 0.92)) // Very light pink
               
                 HStack {
                         
@@ -26,10 +27,12 @@ struct ToDoItem: View{
                                 .onTapGesture {
                                     ToDo.isDone = !ToDo.isDone
                                 }
+ .foregroundColor(Color(red: 0.6, green: 0.8, blue: 0.6)) // Gentle green
                            
                             
                         }
                         Text(ToDo.taskName)
+ .foregroundColor(.gray) // Dark gray
                         Text("Reminders: \(ToDo.remindSchedule)")
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/) //don't know if I like it bold
                       
