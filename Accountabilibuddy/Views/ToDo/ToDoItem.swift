@@ -26,6 +26,9 @@ struct ToDoItem: View{
                             Image(systemName: ToDo.isDone ? "checkmark.square.fill" : "checkmark.square")
                                 .onTapGesture {
                                     ToDo.isDone = !ToDo.isDone
+ if ToDo.isDone {
+ userData.buddy.treatCount += 1
+ }
                                 }
  .foregroundColor(Color(red: 0.6, green: 0.8, blue: 0.6)) // Gentle green
                            

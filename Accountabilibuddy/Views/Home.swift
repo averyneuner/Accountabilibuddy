@@ -16,6 +16,7 @@ struct Home: View {
     var body: some View {
         //example of a side navigation bar
         //figure out how to use this to filter the to dos you have!! 
+
         NavigationStack {
             ZStack {
                 //TODO: next. figure out how to display and then filter to do lists 
@@ -46,6 +47,8 @@ struct Home: View {
                 }
                
                 SideMenuView(isShowing: $showMenu)
+
+                BuddyView()
             }
  .toolbar(showMenu ? .hidden : .visible, for: .navigationBar)
  .toolbarBackground(Color.pink.opacity(0.2), for: .navigationBar) // Added gentle pink background

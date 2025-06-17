@@ -10,6 +10,7 @@ import Foundation
 @Observable
 class UserData {
     var toDos: [ToDo] = load("todo.json")
+    var buddy: Buddy = Buddy(name: "Buddy", type: "Dog")
 }
 
 var toDos: [ToDo] = load("todo.json")
