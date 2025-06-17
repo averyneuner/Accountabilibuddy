@@ -5,7 +5,7 @@
 //  Created by Avery Neuner on 4/2/24.
 //
 
-
+import UserNotifications
 import Foundation
 import SwiftUI
 
@@ -13,13 +13,27 @@ struct Creator: View {
     @Environment (UserData.self) var userData
     @State var isDone = false
     @State var taskName = ""
-    @State var remindSchedule = ""
+ @State var remindSchedule: Date?
     @State var urgency = 0
     @State var repeated = false
     @State var categoryIndex = 0
     
     private func add(){
-        userData.toDos.append(ToDo(isDone: isDone, taskName: taskName, remindSchedule: remindSchedule, urgency: urgency, repeated: repeated, categoryIndex: categoryIndex))
+ userData.toDos.append(ToDo(isDone: isDone, taskName: taskName, remindSchedule: remindSchedule, urgency: urgency, repeated: repeated, categoryIndex: categoryIndex))
+
+ if let reminderDate = remindSchedule {
+ let content = UNMutableNotificationContent()
+ content.title = "Accountabilibuddy Reminder"
+ content.body = "Time to work on: \(taskName)"
+ content.sound = .default
+
+ let calendar = Calendar.current
+ let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: reminderDate)
+ let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+
+ let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+ UNUserNotificationCenter.current().add(request)
+            }
     }
     
     //TODO: for now this is just a static option since buddies don't exist yet

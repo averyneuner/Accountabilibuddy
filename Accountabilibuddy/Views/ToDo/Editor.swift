@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import UserNotifications
 
 // Define gentle green and pink colors
 extension Color {
@@ -28,10 +29,24 @@ struct Editor: View {
     @State private var wasEditted = false
     
     private func edit(){
-        toDos[toDoIndex] = ToDo
+        // Cancel existing notifications for this ToDo
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [ToDo.id.uuidString])
+
+        // Schedule a new notification if remindSchedule is not nil
+        if let reminderDate = userData.toDos[toDoIndex].remindSchedule {
+            let content = UNMutableNotificationContent()
+            content.title = "Accountabilibuddy Reminder"
+            content.body = "Don't forget: \(userData.toDos[toDoIndex].taskName)"
+            content.sound = .default
+
+            let calendar = Calendar.current
+            let components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: reminderDate)
+            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
+            let request = UNNotificationRequest(identifier: userData.toDos[toDoIndex].id.uuidString, content: content, trigger: trigger)
+            UNUserNotificationCenter.current().add(request)
+        }
         wasEditted = true
     }
-    
     var body: some View{
         @Bindable var userData = userData
         
@@ -65,15 +80,11 @@ struct Editor: View {
                 
                 Text("Enter Schedule")
                     .bold().foregroundColor(.gentleGreen)
-                TextField("Remind Schedule", text: $userData.toDos[toDoIndex].remindSchedule)
-                
-                /*
-                 DatePicker(
-                 "Remind Date",
-                 selection: $userData.toDos[0].remindSchedule,
-                 displayedComponents: [.date, .hourAndMinute]
-                 )
-                 */
+                DatePicker(
+                    "Remind Date",
+                    selection: Binding(get: { userData.toDos[toDoIndex].remindSchedule ?? Date() }, set: { userData.toDos[toDoIndex].remindSchedule = $0 }),
+                    displayedComponents: [.date, .hourAndMinute]
+                )
                 
                 Toggle(isOn: $userData.toDos[toDoIndex].repeated){
                     Text("Is this task repeated?")

@@ -13,7 +13,7 @@ struct ToDo: Identifiable, Codable{
     let id: UUID
     var isDone: Bool
     var taskName: String
-    var remindSchedule: String
+    var remindSchedule: Date?
     var urgency: Int //1 - 3 less to most
     var repeated: Bool
     var categoryIndex: Int //1-4 for general, work, social, creative
@@ -59,7 +59,7 @@ struct ToDo: Identifiable, Codable{
         }
     }
     
-    init(isDone: Bool, taskName: String, remindSchedule: String, urgency: Int, repeated: Bool, categoryIndex: Int) {
+    init(isDone: Bool, taskName: String, remindSchedule: Date?, urgency: Int, repeated: Bool, categoryIndex: Int) {
         self.id = UUID()
         self.isDone = isDone
         self.taskName = taskName
